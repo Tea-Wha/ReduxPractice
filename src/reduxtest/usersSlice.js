@@ -1,9 +1,9 @@
-import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 // API 호출을 처리하는 비동기 Thunk
 export const fetchUsers = createAsyncThunk(
   "users/fetchUsers",
-  async (_, {rejevtWithValue}) => {
+  async (_, { rejevtWithValue }) => {
     try {
       const response = await fetch(
         "https://jsonplaceholder.typicode.com/users"

@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 export const userSlice = createSlice({
   name: "user",
@@ -12,8 +12,11 @@ export const userSlice = createSlice({
   },
 });
 
-export const {set_name} = userSlice.actions;
+// 액션 생성자 내보내기
+export const { set_name } = userSlice.actions;
 
-export const selectName = (state) => state.user.name;
+// 상태 셀렉터 내보내기
+export const selectName = (state) => state.user.name; // state / name(user) / state 값 (name)
 
+// 리듀서 내보내기
 export default userSlice.reducer;
