@@ -1,19 +1,20 @@
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, {useState} from "react";
+import {useSelector, useDispatch} from "react-redux";
+import {set_name, selectName} from "./userSlice";
 
 function User() {
-  const name = useSelector((state) => state.user.name);
+  const name = useSelector(selectName);
   const dispatch = useDispatch();
   const [input, setInput] = useState("");
 
   const updateName = () => {
-    dispatch({ type: "SET_NAME", payload: input });
+    dispatch(set_name(input));
     setInput("");
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>User Name: {name || "No Name"}</h1>
+    <div style={{textAlign: "center", marginTop: "50px"}}>
+      <h1>User Name: {name}</h1>
       <input
         type="text"
         value={input}

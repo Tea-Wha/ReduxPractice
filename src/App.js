@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Counter from "./reduxtest/counter";
 import User from "./reduxtest/user";
+import Users from "./reduxtest/users";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <User />
+        <Users />
       </header>
     </div>
   );
