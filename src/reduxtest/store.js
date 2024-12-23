@@ -20,12 +20,14 @@ const persistConfig = {
   storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, counterReducer);
+const persistedCounterReducer = persistReducer(persistConfig, counterReducer);
+
+const persistedUserReducer = persistReducer(persistConfig, userReducer);
 
 const store = configureStore({
   reducer: {
-    counter: persistedReducer,
-    user: userReducer,
+    counter: persistedCounterReducer,
+    user: persistedUserReducer,
     users: usersReducer,
   },
   middleware: (getDefaultMiddleware) =>

@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// reducer 정의
 export const counterSlice = createSlice({
   name: "counter",
   initialState: {
