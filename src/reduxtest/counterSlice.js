@@ -1,10 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 // reducer 정의
+// 슬라이스 생성
 export const counterSlice = createSlice({
-  name: "counter",
+  name: "counter", // 슬라이스 이름
   initialState: {
-    value: 0,
+    value: 0, // 초기 상태
   },
   reducers: {
     increment: (state) => {

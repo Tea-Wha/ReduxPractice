@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// 슬라이스 생성
 export const userSlice = createSlice({
   name: "user",
   initialState: {

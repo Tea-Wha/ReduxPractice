@@ -4,6 +4,7 @@ import "./App.css";
 import Counter from "./reduxtest/counter";
 import User from "./reduxtest/user";
 import Users from "./reduxtest/users";
+import Api from "./reduxtest/api";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Counter />
         <User />
         <Users />
+        <Api />
       </header>
     </div>
   );
